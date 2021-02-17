@@ -3861,7 +3861,7 @@ input[type=button].btn-block {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid black;
+  border-bottom: none;
 }
 .nav-tabs .nav-item {
   margin-bottom: -1px;

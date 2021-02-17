@@ -5,6 +5,11 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ .dat-font{
+  font-family: 'Orbitron', sans-serif;
+ }
+
  .pointer{
    cursor: pointer;
  }
@@ -3856,7 +3861,7 @@ input[type=button].btn-block {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid black;
 }
 .nav-tabs .nav-item {
   margin-bottom: -1px;

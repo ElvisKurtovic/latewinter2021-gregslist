@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="sticky-top">
         <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
             <a class="navbar-brand" href="#">
                 <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
@@ -65,6 +65,75 @@
         <div class="row">
             <div class="col">
                 <h1>Houses</h1>
+                <form class="form-inline" onsubmit="app.housesController.createHouse(event)">
+                    <div class="form-group">
+                        <input type="number" name="bedrooms" id="bedrooms" class="form-control" placeholder="Bedrooms"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="bathrooms" id="bathrooms" class="form-control"
+                            placeholder="Bathrooms" aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="levels" id="levels" class="form-control" placeholder="Levels"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="imgUrl" id="imgUrl" class="form-control" placeholder="ImgUrl"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="year" id="year" class="form-control" placeholder="Year"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="price" id="price" class="form-control" placeholder="Price"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="description" id="description" class="form-control"
+                            placeholder="Description" aria-describedby="helpId">
+                    </div>
+                    <button class="btn btn-info" type="submit">Create</button>
+                </form>
+                <div class="row" id="houses">
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1>Jobs</h1>
+                <form class="form-inline" onsubmit="app.jobsController.createJob(event)">
+                    <div class="form-group">
+                        <input type="text" name="company" id="company" class="form-control" placeholder="Company"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="jobTitle" id="jobTitle" class="form-control" placeholder="JobTitle"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="hours" id="hours" class="form-control" placeholder="Hours"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="rate" id="rate" class="form-control" placeholder="Rate"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="description" id="description" class="form-control"
+                            placeholder="Description" aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="imgUrl" id="imgUrl" class="form-control" placeholder="ImgUrl"
+                            aria-describedby="helpId">
+                    </div>
+                    <button class="btn btn-info" type="submit">Create</button>
+                </form>
+                <div class="row" id="jobs">
+
+                </div>
             </div>
         </div>
     </main>

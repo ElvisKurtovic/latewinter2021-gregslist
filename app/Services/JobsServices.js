@@ -8,6 +8,7 @@ class JobsService {
 
     constructor() {
         console.log("jobs service");
+        this.getJobs()
     }
 
     async getJobs() {

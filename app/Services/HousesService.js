@@ -7,6 +7,7 @@ class HousesService {
 
     constructor() {
         console.log("houses service");
+        this.getHouses()
     }
     async getHouses() {
         try {

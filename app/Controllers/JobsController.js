@@ -29,7 +29,6 @@ export default class JobsController {
             hours: form.hours.value,
             rate: parseFloat(form.rate.value),
             description: form.description.value,
-            imgUrl: form.imgUrl.value,
         }
         console.log(rawJob)
         jobsService.createJob(rawJob)

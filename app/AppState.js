@@ -19,7 +19,7 @@ class AppState extends EventEmitter {
 
   /**@type {Job[]} */
 
-  jobs = [new Job({ company: "Elo Inc", jobTitle: "Smurf", hours: 40, rate: 60000, description: "Its a job", imgUrl: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Z2FtaW5nfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80' }), new Job({ company: "Elo Inc", jobTitle: "Smurf", hours: 40, rate: 60000, description: "Its a job", imgUrl: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Z2FtaW5nfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80' })]
+  jobs = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {

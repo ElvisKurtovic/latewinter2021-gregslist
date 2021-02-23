@@ -1,24 +1,24 @@
 import { ProxyState } from "../AppState.js"
 import { carsService } from "../Services/CarsService.js"
 
-  function _draw(){
-    let cars = ProxyState.cars
-    let template = ""
-    cars.forEach(car=> template += car.Template)
-    // console.log(template)
-    document.getElementById('cars').innerHTML = template
-    console.log(ProxyState.cars)
-  }
+function _draw() {
+  let cars = ProxyState.cars
+  let template = ""
+  cars.forEach(car => template += car.Template)
+  // console.log(template)
+  document.getElementById('cars').innerHTML = template
+  console.log(ProxyState.cars)
+}
 
-export default class CarsController{
-  constructor(){
+export default class CarsController {
+  constructor() {
     console.log("cars controller working")
     console.log(ProxyState.cars)
     _draw()
     ProxyState.on("cars", _draw)
   }
 
-  createCar(event){
+  createCar(event) {
     event.preventDefault();
     console.log('creating car')
     let form = event.target
@@ -30,18 +30,17 @@ export default class CarsController{
       price: parseFloat(form.price.value),
       description: form.description.value,
       imgUrl: form.imgUrl.value,
-      miles: form.miles.value
     }
     console.log(rawCar)
     carsService.createCar(rawCar)
   }
 
-  bid(id){
+  bid(id) {
     console.log('bidding ' + id)
     carsService.bid(id)
   }
 
-  deleteCar(id){
+  deleteCar(id) {
     console.log(id)
     carsService.deleteCar(id)
   }
